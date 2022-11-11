@@ -26,9 +26,9 @@ certtool --generate-privkey --outfile ca-key.pem
 certtool --generate-self-signed --load-privkey ca-key.pem --template ca.tmpl --outfile ca-cert.pem
 
 cat << EOF > server.tmpl
-#YourIp
+#yourIp
 cn=$ip
-organization = "Big Corp"
+organization = "my company"
 expiration_days = 3650
 signing_key
 encryption_key
