@@ -13,7 +13,7 @@ cd certificates
 
 cat << EOF > ca.tmpl
 cn = "VPN CA"
-organization = "Big Corp"
+organization = "vandy global"
 serial = 1
 expiration_days = 3650
 ca
@@ -26,9 +26,9 @@ certtool --generate-privkey --outfile ca-key.pem
 certtool --generate-self-signed --load-privkey ca-key.pem --template ca.tmpl --outfile ca-cert.pem
 
 cat << EOF > server.tmpl
-#yourIP
+88.198.128.122
 cn=$ip
-organization = "my company"
+organization = "vandy global"
 expiration_days = 3650
 signing_key
 encryption_key
