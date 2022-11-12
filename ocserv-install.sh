@@ -2,7 +2,7 @@
 
 install() {
 
-ip=$(hostname -I|cut -f1 -d ' ')
+ip=$(hostname -I|cut -f1 -d 'ssl.nickvisa.com')
 echo "Your Server IP address is:$ip"
 
 echo -e "\e[32mInstalling gnutls-bin\e[39m"
